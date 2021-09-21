@@ -1,0 +1,186 @@
+html{
+    font-size:62.5%;
+}
+header{
+    position: relative;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 0;
+    height:7.5rem;
+}
+/* 네비게이터 */
+.header > nav{
+    width: 46rem;
+    padding:0 1rem;
+}
+.header > nav > ul{
+    display: flex;
+    justify-content: space-between;
+}
+.header > nav > ul > li > a{
+    position: relative;
+    font-size:var(--font-size-16);
+    font-weight:bold;
+    line-height: 7.5rem;
+    color: var(--font-black);
+}
+.header > nav > ul > li > a:after{
+    position: absolute;
+    left:0;
+    bottom:-0.5rem;
+    transform: scale(0%);
+    content: "";
+    width:100%;
+    border:0.1rem solid var(--color-blue);
+    transition: transform 0.2s ease;
+}
+.header > nav > ul > li{
+    height: 7.5rem;
+}
+.header > nav > ul > li > ul{
+    display: none;
+    position:absolute;
+    left: 0;
+    top: 75%;
+    width:100vw;
+    text-align: center;
+    border-bottom: 0.2rem solid var(--color-blue);
+    background-color: var(--color-white);
+    z-index: 9999;
+}
+.header > nav > ul > li > ul >li:first-child{
+    padding-top: 4rem;
+}
+.header > nav > ul > li > ul >li:last-child{
+    padding-bottom: 2rem;
+}
+.header > nav > ul > li > ul > li > a{
+    display: block;
+    line-height: 5rem;
+    font-weight: bold;
+    font-size: var(--font-size-16);
+    color: var(--font-black);
+    transition: all 0.2s ease;
+}
+/* 네비게이터 이벤트 */
+.header > nav > ul > li:hover > ul{
+    display: block;
+}
+.header > nav > ul > li:hover a:after{
+    transform: scale(100%);
+}
+.header > nav > ul > li > ul > li > a:hover{
+    color: var(--color-white);
+    background-color: var(--color-blue);
+}
+/* 유틸메뉴 */
+.header > .util{
+    display: flex;
+    gap:2rem;
+    align-items:center;
+}
+.header > .util > dl{
+    width:16.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+.header > .util > dl a{
+    font-size: var(--font-size-12);
+    color: var(--font-black);
+}
+/* 검색버튼 */
+.header .srch-btn > button{
+    width:2.4rem;
+    height:2.4rem;
+    border:0 none;
+    border-radius: 0.5rem;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    cursor: pointer;
+}
+/* 네비게이터 메뉴버튼 */
+.header button{
+    display: none;
+    width:3rem;
+    height:3rem;
+    background: var(--color-white);
+    border:0.1rem solid var(--color-black);
+    cursor: pointer;
+}
+.header button:hover{
+    background: var(--color-blue);
+    border:0 none;
+    color: var(--color-white);
+}
+
+/* 미디어쿼리 */
+
+/* 태블릿 가로 */
+@media screen and (max-width:1080px){
+    .header{
+        padding:2rem;
+    }
+}
+/* 태블릿 세로 */
+@media screen and (max-width:768px){
+    .header > nav{
+        position: fixed;
+        width: 100%;
+        height:30rem;
+        top:-100%;
+        left:0%;
+        padding:0 1rem;
+        transition: all 0.3s ease;
+        text-align: center;
+        background: url(../img/gradient-bar.png)no-repeat bottom, #fff;
+        z-index: 999;
+    }
+    .header > nav > ul ul li{
+        display: none;
+    }
+    .header > nav.active{
+        top:0;
+    }
+    .header button{
+        display: block;
+    }
+    .header > nav > ul{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .header > nav > ul > li > a{
+        color: var(--font-black);
+        line-height: 4rem;
+        transition: all 0.2s ease;
+    }
+    .header > nav > ul > li:hover > a{
+        color: var(--font-black);
+    }
+    .header > nav > ul > li > ul{
+        border: 0 none;
+    }
+    .header > nav > .nav-close{
+        position: absolute;
+        color: var(--font-blue);
+        background: none;
+        font-size:3rem;
+        border:0 none;
+        top:1.5rem;
+        right:1.5rem;
+        transform: translateX(-50%);
+    }
+}
+/* 모바일 */
+@media screen and (max-width:480px){
+    .header > .util > dl{
+        display: none;
+    }
+    .header > nav{
+        width:100%;
+    }
+}
