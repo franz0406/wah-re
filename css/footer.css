@@ -1,0 +1,129 @@
+footer{
+    margin-top: 3rem;
+    padding: 3.4rem 0;
+    background: url(../img/gradient-bar.png)repeat-x, var(--color-white);
+}
+footer > div{
+    display: flex;
+    justify-content: space-between;
+    height: 7.3rem;
+    max-width: 106rem;
+	margin: 0 auto;
+}
+footer > div > .address{
+    display: flex;
+    gap:1.8rem;
+}
+footer > div > .address > div dl{
+    display: flex;
+    gap:1.5rem;
+    margin-bottom: 1.8rem;
+}
+footer > div > .address > div dl a{
+    font-size: var(--font-size-12);
+    color: var(--font-black);
+}
+footer > div > .address > div dl a > span{
+    color: var(--font-blue);
+}
+footer > div > .address > div > address p:first-of-type{
+    padding-bottom:1.8rem;
+    font-size: var(--font-size-12);
+    color: var(--font-gray);
+}
+footer > div > .address > div > address p:last-of-type{
+    font-size: var(--font-size-12);
+    color: var(--font-gray);
+}
+footer > div > .logo img{
+    height:100%;
+}
+footer > div > .logo img:first-of-type{
+    padding-right:1rem;
+}
+/* 이벤트 */
+footer > div > .address > div dl a:hover{
+    font-weight: bold;
+}
+
+/* 위로가기버튼 */
+.to-top{
+    position: fixed;
+    display: none;
+    right:3rem;
+    bottom:3rem;
+    width:4.5rem;
+    height:4.5rem;
+    background: var(--color-blue);
+    border-radius: 0.6rem;
+    opacity: 0.7;
+    transition: all 0.3s;
+    text-align: center;
+    z-index: 99;
+}
+.to-top i{
+    font-size: 2.5rem;
+    color:#fff;
+    padding:1.5rem 0;
+}
+.to-top:hover{
+    opacity: 1;
+}
+.to-top > i {
+    animation: up 2s infinite ease;
+}
+@keyframes up {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-1rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* 미디어쿼리 */
+
+/* 태블릿 가로 */
+@media screen and (max-width:1080px){
+    footer{
+        padding: 3.4rem 2rem;
+    }
+    footer > div{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer > div > .logo{
+        margin-top: 2rem;
+    }
+    footer > div > .logo img:first-of-type{
+        width:10rem;
+        height:6.5rem;
+    }
+    footer > div > .logo img:last-of-type{
+        width:13.3rem;
+    }
+}
+/* 태블릿 세로 */
+@media screen and (max-width:768px){
+    footer > div > .logo{
+        display: none;
+    }
+    footer > div > .address{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom:2rem;
+    }
+    footer > div > .address > img{
+        width:7.2rem;
+    }
+}
+/* 모바일 */
+@media screen and (max-width:480px){
+    footer > div > .address > div dl{
+        flex-direction: column;
+        align-items: center;
+    }
+}
