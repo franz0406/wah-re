@@ -1,0 +1,250 @@
+/* 배너 */
+main > .banner{
+    padding-top: 2.3rem;
+}
+main > .banner > .main-banner img{
+    width:100%;
+}
+/* 교육지식 카드리스트 */
+main > .card-list{
+    margin-top: 6rem;
+}
+main > .card-list > .list-wrap{
+    width:100%;
+    max-width:88rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    flex-wrap: wrap;
+}
+main > .card-list > .list-wrap > .list{
+    position: relative;
+    display: flex;
+    width:28rem;
+    height:11.6rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 25%);
+    overflow: hidden;
+}
+main > .card-list > .list-wrap > .list:nth-of-type(1){
+    background: url(../img/m_box_bg01.gif)no-repeat 0.8rem 50%;
+}
+main > .card-list > .list-wrap > .list:nth-of-type(2){
+    background: url(../img/m_box_bg04.gif)no-repeat 0.8rem 50%;
+}
+main > .card-list > .list-wrap > .list:nth-of-type(3){
+    background: url(../img/m_box_bg03.gif)no-repeat 0.8rem 50%;
+}
+main > .card-list > .list-wrap > .list:nth-of-type(4){
+    background: url(../img/m_box_bg06.gif)no-repeat 0.8rem 50%;
+}
+main > .card-list > .list-wrap > .list:nth-of-type(5){
+    background: url(../img/m_box_bg05_1.gif)no-repeat 0.8rem 50%;
+}
+main > .card-list > .list-wrap > .list:nth-of-type(6){
+    background: url(../img/m_box_bg02.gif)no-repeat 0.8rem 50%;
+}
+main > .card-list > .list-wrap > .list > dl{
+    padding: 1.5rem 1.7rem 0 7.6rem;
+
+}
+main > .card-list > .list-wrap > .list > dl > dt{
+    font-size: var(--font-size-14);
+    font-weight: bold;
+    line-height:2.2rem;
+    color: var(--font-black);
+}
+main > .card-list > .list-wrap > .list > dl > dd{
+    font-size: var(--font-size-12);
+    line-height:1.9rem;
+    color: var(--font-gray);
+    margin-top: 1rem;
+}
+main > .card-list > .list-wrap > .list > div{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 3rem;
+    opacity: 0;
+    background: var(--color-blue);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+main > .card-list > .list-wrap > .list > div a{
+    display: block;
+    line-height: 3rem;
+    font-weight: bold;
+    font-size: var(--font-size-12);
+    color: var(--font-white);
+}
+/* 이벤트 */
+main > .card-list > .list-wrap > .list:hover > div{
+    opacity: 1;
+}
+
+/* 공지사항과 자료실 및 제작기법 */
+main > .notice-mobile{
+    display: flex;
+    margin-top: 6rem;
+    gap:2rem;
+}
+main > .notice-mobile > section{
+    width: 50%;
+    max-width: 52rem;
+    height: 24rem;
+}
+/* 공지사항 및 자료실 */
+main > .notice-mobile > .board{
+    border-top:0.2rem solid var(--color-black);
+    border-bottom:0.2rem solid var(--color-black);
+}
+main > .notice-mobile > .board > .tap-menu{
+    padding: 2rem 2rem 0;
+    height:100%;
+}
+/* 탭 제목 */
+main > .notice-mobile > .board .tap-title{
+    display:flex;
+    gap: 2rem;
+    padding-bottom:1.5rem;
+    border-bottom: 0.1rem solid var(--color-black);
+}
+main > .notice-mobile > .board .tap-title a{
+    color: var(--font-gray);
+    font-weight:bold;
+    font-size: var(--font-size-22);
+}
+main > .notice-mobile > .board .tap-title li > a.active{
+    color: var(--color-blue);
+}
+/* 탭 메뉴 */
+main > .notice-mobile > .board > .tap-menu >.tap-list > ul > li > ul{
+    display: flex;
+    gap:1rem;
+    justify-content: space-between;
+    font-size: var(--font-size-12);
+} 
+main > .notice-mobile > .board > .tap-menu >.tap-list > ul > li > ul > li{
+    padding-top:1.5rem;
+}
+main > .notice-mobile > .board > .tap-menu >.tap-list > ul > li > ul > li:first-of-type{
+    width:100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+main > .notice-mobile > .board > .tap-menu >.tap-list > ul > li > ul > li:last-of-type{
+    flex-shrink: 0;
+}
+main > .notice-mobile > .board > .tap-menu >.tap-list > ul > li > ul a{
+    position: relative;
+    padding-left:1.5rem;
+    color: var(--color-black);
+}
+main > .notice-mobile > .board > .tap-menu >.tap-list > ul > li > ul a::before{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content:"";
+    width:0.2rem;
+    height:0.2rem;
+    background: var(--color-red);
+}
+main > .notice-mobile > .board > .tap-menu >.tap-list > ul > li > ul a > span{
+    color: var(--font-red);
+}
+#archive{
+    display: none;
+}
+/* 이벤트 */
+main > .notice-mobile > .board > .tap-menu >.tap-list > ul > li > ul a:hover{
+    font-weight: bold;
+}
+
+/* 제작기법 */
+main > .notice-mobile > .mobile-setting{
+    border-top:0.2rem solid var(--color-black);
+}
+main > .notice-mobile > .mobile-setting > div{
+    padding:1.7rem 2rem 0;
+    text-align: center;
+}
+main > .notice-mobile > .mobile-setting > div > h4{
+    padding-bottom: 1.6rem;
+    font-size: var(--font-size-22);
+    font-weight: bold;
+    color: var(--font-black);
+}
+main > .notice-mobile > .mobile-setting > div > div{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+main > .notice-mobile > .mobile-setting > div > div > div{
+    width:50%;
+    height: 18.3rem;
+    border:0.1rem solid var(--color-black);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+main > .notice-mobile > .mobile-setting > div > div > div > h5{
+    font-size: var(--font-size-16);
+    font-weight: bold;
+    color: var(--font-black);
+    padding-top:2.4rem;
+}
+main > .notice-mobile > .mobile-setting > div > div > div > p{
+    padding-top: 1.2rem;
+    font-size: var(--font-size-14);
+    color: var(--font-gray);
+    line-height:2rem;
+}
+main > .notice-mobile > .mobile-setting > div > div > div > div{
+    position: relative;
+    margin: 0.8rem auto 0;
+    width:6.8rem;
+    height:6.8rem;
+    background: var(--color-blue);
+    border-radius: 50%;
+}
+main > .notice-mobile > .mobile-setting > div > div > div > div > i{
+    font-size: 2.7rem;
+    color: var(--color-white);
+}
+main > .notice-mobile > .mobile-setting > div > div > div > div > i,
+main > .notice-mobile > .mobile-setting > div > div > div > div > img{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 이벤트 */
+main > .notice-mobile > .mobile-setting > div > div > div:hover{
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 50%);
+}
+
+/* 미디어쿼리 */
+
+/* 태블릿 세로 */
+@media screen and (max-width:768px){
+    main > .notice-mobile{
+        flex-direction: column;
+    }
+    main > .notice-mobile > section{
+        width:100%;
+        margin:0 auto;
+    }
+    main > .card-list{
+        margin-top: 0;
+    }
+}
+/* 모바일 */
+@media screen and (max-width:480px){
+    main > .notice-mobile > .mobile-setting > div > div > div > div{
+        width:4.8rem;
+        height: 4.8rem;
+    }
+}
