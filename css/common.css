@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body * {
+    font-family: 'Nanum Gothic', monospace, sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    /* 색상 */
+    --color-blue:#4980CF;
+    --color-white:#ffffff;
+    --color-light-blue:#F9FBFF;
+    --color-red:#C54303;
+    --color-light-gray:#CACACA;
+    --color-black:#333333;
+    --color-gray:#666666;
+    
+    /* 폰트사이즈 */
+    --font-size-10:1rem;
+    --font-size-12:1.2rem;
+    --font-size-14:1.4rem;
+    --font-size-16:1.6rem;
+    --font-size-18:1.8rem;
+    --font-size-22:2.2rem;
+    
+    /* 폰트컬러 */
+    --font-white:#ffffff;
+    --font-blue:#4980CF;
+    --font-black:#333333;
+    --font-gray:#666666;
+    --font-red:#C54303;
+    --font-green:#209B35;
+}
+/* 본문바로가기 */
+.skip{
+    position:absolute;
+    top:-4rem;  left:0;
+    width:100%;
+    height:4rem;
+    font-size: var(--font-size-12);
+    line-height: 4rem;
+    text-align: center;
+    color: var(--font-white);
+    background-color: var(--color-blue);
+    transition: top .3s ease;
+    z-index: 9999;
+}
+
+.skip:focus{
+    top:0;
+}
+
+/* 섹션 가운데 레이아웃 */
+.center{
+	max-width: 106rem;
+	margin: 0 auto;
+}
+@media screen and (max-width:1080px) and (min-width:0){
+    .center{
+        padding: 2rem;
+    }
+}
+
+/* 글자숨김 */
+.hidden{
+	overflow: hidden; 
+	display:block; 
+	position:absolute; 
+	border: 0; 
+	width: 1px; 
+	height: 1px; 
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.main-wrap{
+    padding-top: 2.3rem;
+    display: flex;
+    gap: 2rem;
+}
+/* 서브 타이틀 */
+.sub-title{
+    font-size: var(--font-size-16);
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--font-blue);
+    margin-bottom: 3rem;
+    padding-left:3rem;
+    background: url(../img/icon/sub-title-point.png)no-repeat;
+}
+/* 메인 사이드 네비게이터 */
+.main-wrap > .lnb{
+    min-width:25rem;
+}
+.main-wrap > .lnb > h2{
+    text-align: center;
+    font-size: var(--font-size-22);
+    font-weight: bold;
+    line-height: 5.5rem;
+    color: var(--font-blue);
+    border-top: 0.1rem solid var(--color-gray);
+    border-bottom: 0.1rem solid var(--color-gray);
+}
+.main-wrap > .lnb > ul > li{
+    border-bottom: 0.1rem solid var(--color-light-gray);
+}
+.main-wrap > .lnb > ul > li.on > a{
+    background: url(../img/icon/arrow-right.png)no-repeat 93% 50%, var(--color-blue);
+    color: var(--font-white);
+}
+.main-wrap > .lnb > ul > li > a{
+    display: block;
+    font-size: var(--font-size-16);
+    color: var(--font-black);
+    line-height: 4.5rem;
+    font-weight: bold;
+    padding-left: 1.5rem;
+}
+.main-wrap > .lnb > ul > li > ul > li > a{
+    position: relative;
+    display: block;
+    line-height: 3.2rem;
+    font-size: var(--font-size-12);
+    padding-left:3.4rem;
+    color: var(--font-gray);
+}
+.main-wrap > .lnb > ul > li > ul > li > a::before{
+    position: absolute;
+    content:"";
+    left:1.5rem;
+    top:50%;
+    transform: translateY(-50%);
+    width: 0.4rem;
+    height:0.4rem;
+    background: var(--color-red);
+}
+.main-wrap > .lnb > ul > li > ul > li.on > a{
+    color: var(--font-blue);
+    font-weight: bold;
+}
+@media screen and (max-width:768px){
+    .main-wrap{
+        gap:1rem;
+    }
+    .main-wrap > .lnb{
+        min-width:20rem;
+    }
+    .main-wrap > .lnb > h2{
+        font-size: var(--font-size-18);
+        line-height: 4.5rem;
+    }
+    .main-wrap > .lnb > ul > li > a{
+        font-size: var(--font-size-14);
+        line-height: 3.5rem;
+    }
+    .main-wrap > .lnb > ul > li.on > a{
+        background: var(--color-blue);
+        color: var(--font-white);
+    }
+}
+@media screen and (max-width:480px){
+    .main-wrap > .lnb{
+        min-width:16rem;
+    }
+    .main-wrap > .lnb > h2{
+        font-size: var(--font-size-16);
+        line-height: 3.5rem;
+    }
+    .main-wrap > .lnb > ul > li > a{
+        font-size: var(--font-size-12);
+        line-height: 2.5rem;
+    }
+}
+/* 메인 본문 해더 */
+.main-wrap > .main-content{
+    width:100%;
+}
+.main-content-wrap{
+    padding:2rem 3rem 0;
+}
+.main-wrap > .main-content > header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.1rem solid var(--color-gray);
+    border-bottom: 0.1rem solid var(--color-gray);
+}
+.main-wrap > .main-content > header > h2{
+    font-size: var(--font-size-22);
+    color: var(--font-blue);
+    font-weight:bold;
+    line-height: 5.5rem;
+    padding-left: 3rem;
+}
+.main-wrap > .main-content > header > p{
+    font-size: var(--font-size-14);
+    color: var(--font-gray);
+    padding-right: 3rem;
+}
+.main-wrap > .main-content > header > p > span{
+    font-weight: bold;
+}
+@media screen and (max-width:1080px){
+    .main-wrap > .main-content > header > p{
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .main-wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-wrap > .main-content > header > h2{
+        font-size: var(--font-size-18);
+        font-weight:bold;
+        line-height: 4.5rem;
+        padding-left: 2rem;
+    }
+    .main-content-wrap{
+        padding:1rem 2rem 0;
+    }
+}
+@media screen and (max-width:480px){
+    .main-wrap > .main-content > header > h2{
+        font-size: var(--font-size-16);
+        font-weight:bold;
+        line-height: 3.5rem;
+    }
+}
+/* 메인 하단 팀 버너스 리 인용구 박스 */
+.web-box{
+    padding-top: 2rem;
+    font-size: var(--font-size-14);
+    line-height: 2.2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,25%);
+    background: url(../img/com_bg.jpg)no-repeat 5rem 50%, var(--color-light-blue);
+}
+.web-box > div{
+    padding-left: 18.5rem;
+}
+.web-box q{
+    display: block;
+    padding-bottom: 1.8rem;
+    color: #000;
+}
+.web-box p{
+    color: var(--font-red);
+    padding-bottom: 2rem;
+}
+@media screen and (max-width:1080px){
+    .web-box{
+        margin: 0 2rem;
+        padding:2rem 0 0 0;
+    }
+}
+@media screen and (max-width:768px){
+    .web-box{
+        background: url(../img/com_bg.jpg)no-repeat 1rem 50%, var(--color-light-blue);
+    }
+    .web-box > div{
+        padding-left: 10.5rem;
+        font-size: var(--font-size-12);
+        line-height: 1.9rem;
+    }
+}
+@media screen and (max-width:480px){
+    .web-box{
+        background: var(--color-light-blue);
+    }
+    .web-box > div{
+        padding-left: 1rem;
+        padding-right: 0.5rem;
+        font-size: var(--font-size-12);
+        line-height: 1.9rem;
+    }
+}
